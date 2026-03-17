@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics - replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<title>About &amp; Contact | Throughline Finance</title>
+<meta name="description" content="Mike Tryba -- Senior Accounting Manager and Finance Automation Specialist serving private golf clubs in Massachusetts and Rhode Island.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1117; --slate: #1e2433; --steel: #2d3a52;
+    --line: #3d7fff; --line-light: #6fa3ff;
+    --cream: #f5f2ec; --warm: #e8e2d8; --muted: #8a94a8; --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); font-family: 'DM Sans', sans-serif; color: var(--ink); }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,17,23,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(61,127,255,0.12); padding: 0 64px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--white); font-weight: 700; }
+  .nav-logo-sub { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--line-light); margin-top: 2px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a.active { color: var(--line); }
+  .nav-cta { color: var(--ink) !important; background: var(--line); padding: 8px 18px; border-radius: 2px; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--line-light) !important; }
+
+  /* ABOUT SECTION */
+  .about-section {
+    background: var(--ink);
+    padding: 120px 64px 80px;
+  }
+  .about-inner { max-width: 1100px; margin: 0 auto; }
+  .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--line); margin-bottom: 20px; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 700; color: var(--white); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 48px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+  .about-body { font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; }
+
+  .about-quote { border-left: 2px solid var(--line); padding-left: 24px; margin: 32px 0; }
+  .about-quote p { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--warm); line-height: 1.6; font-style: italic; }
+
+  .creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--steel); }
+  .cred-block { background: var(--slate); padding: 28px; border-top: 2px solid transparent; transition: border-color 0.2s; }
+  .cred-block:hover { border-color: var(--line); }
+  .cred-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--line); margin-bottom: 12px; }
+  .cred-items { list-style: none; }
+  .cred-items li { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--muted); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+  .cred-items li:last-child { border-bottom: none; }
+  .cred-wide { grid-column: 1 / -1; }
+
+  /* DIVIDER */
+  .section-divider { height: 1px; background: rgba(61,127,255,0.12); max-width: 1100px; margin: 0 auto; }
+
+  /* CONTACT SECTION */
+  .contact-section { background: var(--ink); padding: 80px 64px 100px; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--line); margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+  .section-body { font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 560px; margin-bottom: 56px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+  .contact-details { display: flex; flex-direction: column; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .contact-detail:first-child { padding-top: 0; }
+  .contact-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--line); width: 72px; flex-shrink: 0; padding-top: 2px; }
+  .contact-value { font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--warm); line-height: 1.5; }
+  .contact-value a { color: var(--warm); text-decoration: none; transition: color 0.2s; }
+  .contact-value a:hover { color: var(--line-light); }
+
+  .contact-note { margin-top: 32px; background: var(--slate); padding: 24px 28px; border-top: 1px solid rgba(61,127,255,0.15); }
+  .contact-note p { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .pilot-box { background: var(--slate); padding: 44px 40px; border-top: 2px solid var(--line); }
+  .pilot-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--line); margin-bottom: 16px; }
+  .pilot-title { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--white); font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+  .pilot-body { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+  .btn-primary { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); background: var(--line); padding: 14px 28px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--line-light); }
+
+  /* FOOTER */
+  footer { background: #080a0e; padding: 32px 64px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.04); }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
+  .footer-name { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--muted); font-weight: 700; }
+  .footer-right { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: rgba(138,148,168,0.5); }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .about-section, .contact-section { padding-left: 24px; padding-right: 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .creds-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { padding: 28px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+      <circle cx="8" cy="22" r="4" fill="#3d7fff"/>
+      <circle cx="22" cy="14" r="4" fill="#6fa3ff"/>
+      <circle cx="36" cy="22" r="4" fill="#3d7fff"/>
+      <path d="M8 22 L22 14 L36 22" stroke="#3d7fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="4" y1="22" x2="40" y2="22" stroke="rgba(63,127,255,0.25)" stroke-width="1" stroke-dasharray="2 3"/>
+    </svg>
+    <div>
+      <div class="nav-logo-name">Throughline</div>
+      <div class="nav-logo-sub">Finance</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html" class="active">About &amp; Contact</a></li>
+    <li><a href="https://calendly.com/mike-throughlinefinance" target="_blank" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="page-eyebrow">About</div>
+    <h1 class="page-title">Built by a finance professional.<br>Not a software vendor.</h1>
+
+    <div class="about-grid">
+      <div>
+        <p class="about-body">With over a decade in corporate finance, Mike Tryba most recently served as Senior Accounting Manager before moving into Finance Process Automation -- not to leave accounting behind, but to fix it.</p>
+
+        <div class="about-quote">
+          <p>"Most finance tools are built by people who have never closed a month-end. I have, more times than I can count -- and now I build the tools that make it faster, smarter, and less painful."</p>
+        </div>
+
+        <p class="about-body">Mike leads the digital transformation of financial operations, building automated workflows and intelligent document processing systems that turn manual, high-effort processes into reliable engines that run in the background.</p>
+
+        <p class="about-body">His advantage is simple: he speaks fluent accounting and fluent technology. The workflows he builds don't just look good in a demo -- they solve the actual friction that finance teams face at 11pm before a close deadline.</p>
+
+        <p class="about-body" style="color: var(--line-light);">Based in Walpole, MA. Lifelong golfer. Your call gets answered.</p>
+      </div>
+
+      <div>
+        <div class="creds-grid">
+          <div class="cred-block">
+            <div class="cred-label">Background</div>
+            <ul class="cred-items">
+              <li>Senior Accounting Manager</li>
+              <li>Finance Process Automation</li>
+              <li>10+ Years Corporate Finance</li>
+            </ul>
+          </div>
+          <div class="cred-block">
+            <div class="cred-label">Specialties</div>
+            <ul class="cred-items">
+              <li>Workflow Automation</li>
+              <li>Intelligent Document Processing</li>
+              <li>Executive Dashboard Design</li>
+            </ul>
+          </div>
+          <div class="cred-block cred-wide">
+            <div class="cred-label">Tools and Integrations</div>
+            <ul class="cred-items">
+              <li>AI-assisted workflow automation</li>
+              <li>Cloud data warehousing and live dashboards</li>
+              <li>Accounting system integrations</li>
+              <li>Club management system integrations</li>
+            </ul>
+          </div>
+          <div class="cred-block cred-wide">
+            <div class="cred-label">Service Area</div>
+            <ul class="cred-items">
+              <li>Massachusetts and Rhode Island</li>
+              <li>Private golf clubs and country clubs</li>
+              <li>Remote-first engagement model</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background: var(--ink); padding: 0 64px;"><div class="section-divider"></div></div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="section-eyebrow">Contact</div>
+    <h2 class="section-title">Let's talk about your club.</h2>
+    <p class="section-body">The free 30-minute diagnostic is the starting point. We'll look at your current setup, identify the highest-value automation opportunities, and determine whether working together makes sense -- on your terms.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:mike@throughlinefinance.com">mike@throughlinefinance.com</a></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:4135191806">413.519.1806</a></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Walpole, MA<br>Serving MA and RI</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Schedule</div>
+            <div class="contact-value"><a href="https://calendly.com/mike-throughlinefinance" target="_blank">Book a time on Calendly</a></div>
+          </div>
+        </div>
+        <div class="contact-note">
+          <p>No sales pitch. No obligation. If there is not a fit, you leave with a better understanding of what's possible for your club's back office.</p>
+        </div>
+      </div>
+
+      <div class="pilot-box">
+        <div class="pilot-label">30-Day Pilot Offer</div>
+        <div class="pilot-title">Try it before you commit.</div>
+        <div class="pilot-body">Start with a 30-day pilot engagement at no long-term commitment. We'll stand up the core automation for your club and deliver your first set of reports. If it is not working for you, walk away. Onboarding fee waived for the first two engagements.</div>
+        <a href="https://calendly.com/mike-throughlinefinance" target="_blank" class="btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <svg width="20" height="20" viewBox="0 0 44 44" fill="none">
+      <circle cx="8" cy="22" r="4" fill="#3d7fff"/>
+      <circle cx="22" cy="14" r="4" fill="#6fa3ff"/>
+      <circle cx="36" cy="22" r="4" fill="#3d7fff"/>
+      <path d="M8 22 L22 14 L36 22" stroke="#3d7fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="footer-name">Throughline Finance</div>
+  </div>
+  <div class="footer-right">Walpole, MA &bull; mike@throughlinefinance.com &bull; 413.519.1806</div>
+</footer>
+
+</body>
+</html>
